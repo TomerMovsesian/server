@@ -36,8 +36,6 @@ app.get("/sendEmail", (req, res) => {
 
 app.post("/sendEmail", (req, res) => {
   const { to, htmlContent } = req.body;
-  console.log("to: " + to);
-  console.log("htmp content: " + htmlContent);
 
   if (!htmlContent || htmlContent.length === 0) {
     return res.status(400).json({ error: "No data received from the client" });
